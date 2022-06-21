@@ -1,5 +1,4 @@
 FROM fedora:29
-MAINTAINER marc@slintes.net
 
 # Install dependencies
 RUN yum -y install \
