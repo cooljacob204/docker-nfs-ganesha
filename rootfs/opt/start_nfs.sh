@@ -11,6 +11,8 @@ set -e
 : ${TRANSPORTS:="UDP, TCP"}
 : ${SEC_TYPE:="sys"}
 : ${SQUASH_MODE:="No_Root_Squash"}
+: ${ANONGID:=99}
+: ${ANONUID:=99}
 : ${GRACELESS:=true}
 : ${VERBOSITY:="NIV_EVENT"} # NIV_DEBUG, NIV_EVENT, NIV_WARN
 
@@ -56,6 +58,8 @@ EXPORT{
 EXPORT_DEFAULTS{
     Transports = ${TRANSPORTS};
     SecType = ${SEC_TYPE};
+    Anonymous_uid = ${ANONGID};
+    Anonymous_gid = ${ANONUID};
 }
 
 END
